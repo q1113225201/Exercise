@@ -1,13 +1,16 @@
 package com.sjl.exercise;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.sjl.exercise.base.BaseMainActivity;
+import com.sjl.exercise.basic.BasicMainActivity;
+import com.sjl.exercise.bean.CatalogueBean;
+
+public class MainActivity extends BaseMainActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public void initData(Bundle bundle) {
+        list.add(new CatalogueBean("Android 基础", BasicMainActivity.class));
+
     }
 }
