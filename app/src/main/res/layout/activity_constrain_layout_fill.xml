@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".basic.widget.ConstrainLayout.ConstrainLayoutFillActivity">
+
+    <Button
+        android:id="@+id/btn_wrap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="wrap"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_wrap_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="wrap right"
+        app:layout_constraintLeft_toRightOf="@+id/btn_wrap"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_wrap" />
+
+    <Button
+        android:id="@+id/btn_fill"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="fill"
+        app:layout_constraintLeft_toRightOf="@+id/btn_wrap"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_wrap_right" />
+</android.support.constraint.ConstraintLayout>

@@ -1,15 +1,15 @@
-package com.sjl.exercise.basic.widget;
+package com.sjl.exercise.basic.widget.ConstrainLayout;
 
 import android.os.Bundle;
 
 import com.sjl.exercise.R;
 import com.sjl.exercise.base.BaseActivity;
 
-public class ConstraintLayoutLocationActivity extends BaseActivity {
+public class ConstrainLayoutFillActivity extends BaseActivity {
 
     @Override
     public int getContentLayout() {
-        return R.layout.activity_constraint_layout_location;
+        return R.layout.activity_constrain_layout_fill;
     }
 
     @Override

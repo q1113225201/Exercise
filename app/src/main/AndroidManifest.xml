@@ -9,9 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".basic.widget.ConstrainLayoutGuideLineActivity"></activity>
-        <activity android:name=".basic.widget.ConstrainLayoutRatioActivity" />
-        <activity android:name=".basic.widget.ConstraintLayoutLocationActivity" />
+        <activity android:name=".basic.widget.ConstrainLayout.ConstrainLayoutChainActivity"></activity>
+        <activity android:name=".basic.widget.ConstrainLayout.ConstrainLayoutBiasActivity" />
+        <activity android:name=".basic.widget.ConstrainLayout.ConstrainLayoutFillActivity" />
+        <activity android:name=".basic.widget.ConstrainLayout.ConstrainLayoutGuideLineActivity" />
+        <activity android:name=".basic.widget.ConstrainLayout.ConstrainLayoutRatioActivity" />
+        <activity android:name=".basic.widget.ConstrainLayout.ConstraintLayoutLocationActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
