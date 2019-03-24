@@ -21,4 +21,5 @@ public class ConstraintLayoutLocationActivity extends BaseActivity {
     public void initData(Bundle bundle) {
 
     }
+
 }

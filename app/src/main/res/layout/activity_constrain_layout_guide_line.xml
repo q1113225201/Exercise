@@ -16,7 +16,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="vertical 50"
+        android:text="水平引导线左边50dp"
         app:layout_constraintLeft_toLeftOf="@+id/gl_vertical_50"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,7 +30,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="horizontal 50"
+        android:text="垂直引导线下边50dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/gl_horizontal_50" />
 
@@ -51,7 +51,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="percent 0.25 0.25"
+        android:text="百分比引导线左上各25%"
         app:layout_constraintTop_toTopOf="@+id/gl_percent_horizontal"
         app:layout_constraintLeft_toLeftOf="@+id/gl_percent_vertical"/>
 </android.support.constraint.ConstraintLayout>

@@ -10,7 +10,7 @@
         android:id="@+id/btn_wrap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="wrap"
+        android:text="包裹内容"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -18,7 +18,7 @@
         android:id="@+id/btn_wrap_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="wrap right"
+        android:text="包裹内容"
         app:layout_constraintLeft_toRightOf="@+id/btn_wrap"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_wrap" />
@@ -27,7 +27,7 @@
         android:id="@+id/btn_fill"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="fill"
+        android:text="填充"
         app:layout_constraintLeft_toRightOf="@+id/btn_wrap"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_wrap_right" />
