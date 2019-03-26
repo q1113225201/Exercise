@@ -16,5 +16,6 @@ public class BasicMainActivity extends BaseMainActivity {
     @Override
     public void initData(Bundle bundle) {
         list.add(new CatalogueBean("控件", WidgetMainActivity.class));
+        list.add(new CatalogueBean("自定义控件", CustomWidgetActivity.class));
     }
 }
