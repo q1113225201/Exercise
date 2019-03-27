@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".module.activity.correspondence.ActivityCorrespondenceActivity">
+
+    <TextView
+        android:id="@+id/tv_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1、Activity到Activity\n
+1.1 Intent，startActivity(intent)\n
+1.2 类静态变量\n
+1.3 全局变量，单独一个静态变量类"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="2、Activity到Service\n
+2.1 Intent，startService(intent)和stopService(intent)，Service#onStartCommand获取数据\n
+2.2 bindService，用ServiceConnection接口"
+        app:layout_constraintTop_toBottomOf="@+id/tv_activity" />
+
+    <Button
+        android:id="@+id/btn_bind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2.2 绑定服务通信"
+        app:layout_constraintTop_toBottomOf="@+id/tv_service" />
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送消息"
+        app:layout_constraintTop_toBottomOf="@+id/btn_bind" />
+
+    <Button
+        android:id="@+id/btn_unbind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="解绑服务"
+        app:layout_constraintTop_toBottomOf="@+id/btn_send" />
+
+    <TextView
+        android:id="@+id/tv_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="3、Activity到Fragment\n
+3.1 Bundle，Fragment#setArguments(bundle)\n
+3.2 Fragment中定义方法，Activity直接调用"
+        app:layout_constraintTop_toBottomOf="@+id/btn_unbind" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".module.activity.screen.ScreenOrientationActivity">
+
+    <TextView
+        android:id="@+id/tv_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="
+        android:configChanges设置orientation或orientation|keyboardHidden或不填\n
+        横竖屏切换生命周期：\n
+        onPause()->onSaveInstanceState()->onStop()->onDestroy()->onCreate()->onStart()->onRestoreInstanceState()->onResume()"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_toggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="切换横竖屏"
+        app:layout_constraintTop_toBottomOf="@+id/tv_top" />
+
+    <Button
+        android:id="@+id/btn_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="计数"
+        app:layout_constraintTop_toBottomOf="@+id/btn_toggle" />
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btn_count" />
+</android.support.constraint.ConstraintLayout>
