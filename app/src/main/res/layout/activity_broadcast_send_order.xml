@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".module.broadcast.send.BroadcastSendOrderActivity">
+
+    <Button
+        android:id="@+id/btn_send_action1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送Action1->Receiver3->Receiver2->Receiver1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/tb_open"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textOff="Receiver2不拦截"
+        android:textOn="Receiver2拦截"
+        app:layout_constraintTop_toBottomOf="@+id/btn_send_action1" />
+
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="清除数据"
+        app:layout_constraintTop_toBottomOf="@+id/tb_open" />
+
+    <TextView
+        android:id="@+id/tv_receiver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btn_clear" />
+
+</android.support.constraint.ConstraintLayout>
