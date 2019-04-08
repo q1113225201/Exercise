@@ -13,7 +13,7 @@
         [AIDL](https://github.com/q1113225201/Exercise/blob/master/app/src/main/aidl/com/sjl/aidl/ICustomAidlInterface.aidl)
         - [客户端](https://github.com/q1113225201/Exercise/tree/master/app/src/main/java/com/sjl/exercise/module/service/remote/RemoteServiceActivity.java)
 ### 控件
-- [ConstraintLayout](https://github.com/q1113225201/Exercise/tree/master/app/src/main/java/com/sjl/exercise/basic/widget/ConstrainLayout)
+- [ConstraintLayout](https://blog.csdn.net/q1113225201/article/details/88777447)
     - [相对定位](https://github.com/q1113225201/Exercise/blob/master/app/src/main/res/layout/activity_constraint_layout_location.xml)
     - [角度定位](https://github.com/q1113225201/Exercise/blob/master/app/src/main/res/layout/activity_constraint_layout_circle.xml)
     - [比例定位](https://github.com/q1113225201/Exercise/blob/master/app/src/main/res/layout/activity_constrain_layout_bias.xml)
