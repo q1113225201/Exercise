@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:allowBackup="true"
@@ -14,7 +15,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".module.broadcast.send.BroadcastSendOrderActivity"></activity>
+        <service
+            android:name=".module.service.remote.RemoteService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.sjl.aidl.remote"/>
+            </intent-filter>
+        </service>
+
+        <activity android:name=".module.service.remote.RemoteServiceActivity" />
+
+        <service
+            android:name=".module.service.foreground.ForegroundService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".module.service.foreground.ForegroundServiceActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".module.service.ServiceMainActivity" />
+        <activity android:name=".module.broadcast.send.BroadcastSendOrderActivity" />
         <activity
             android:name=".module.activity.screen.ScreenSizeActivity"
             android:configChanges="orientation|screenSize" />

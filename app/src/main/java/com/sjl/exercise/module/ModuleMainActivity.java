@@ -6,6 +6,7 @@ import com.sjl.exercise.base.BaseMainActivity;
 import com.sjl.exercise.bean.CatalogueBean;
 import com.sjl.exercise.module.activity.ActivityMainActivity;
 import com.sjl.exercise.module.broadcast.BroadcastMainActivity;
+import com.sjl.exercise.module.service.ServiceMainActivity;
 
 public class ModuleMainActivity extends BaseMainActivity {
 
@@ -13,5 +14,6 @@ public class ModuleMainActivity extends BaseMainActivity {
     public void initData(Bundle bundle) {
         list.add(new CatalogueBean("Activity", ActivityMainActivity.class));
         list.add(new CatalogueBean("Broadcast", BroadcastMainActivity.class));
+        list.add(new CatalogueBean("Service", ServiceMainActivity.class));
     }
 }

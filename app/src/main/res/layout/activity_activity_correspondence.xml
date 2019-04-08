@@ -40,13 +40,6 @@
         android:text="发送消息"
         app:layout_constraintTop_toBottomOf="@+id/btn_bind" />
 
-    <Button
-        android:id="@+id/btn_unbind"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="解绑服务"
-        app:layout_constraintTop_toBottomOf="@+id/btn_send" />
-
     <TextView
         android:id="@+id/tv_fragment"
         android:layout_width="match_parent"
@@ -55,6 +48,6 @@
         android:text="3、Activity到Fragment\n
 3.1 Bundle，Fragment#setArguments(bundle)\n
 3.2 Fragment中定义方法，Activity直接调用"
-        app:layout_constraintTop_toBottomOf="@+id/btn_unbind" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_send" />
 
 </android.support.constraint.ConstraintLayout>

@@ -5,12 +5,14 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.sjl.exercise.R;
 import com.sjl.exercise.base.BaseActivity;
 
 public class ActivityCorrespondenceActivity extends BaseActivity {
+    private static final String TAG = "ActivityCorrespondenceA";
 
     @Override
     public int getContentLayout() {
@@ -27,33 +29,31 @@ public class ActivityCorrespondenceActivity extends BaseActivity {
                 correspondenceBinder.sendData(String.valueOf(cnt++));
             }
         });
-        findViewById(R.id.btn_unbind).setOnClickListener(v -> unbindService());
     }
 
-    private ServiceConnection serviceConnection;
+    private ServiceConnection serviceConnection = new ServiceConnection() {
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder service) {
+            Log.i(TAG, "服务绑定，Activity发送消息");
+            correspondenceBinder = (ActivityCorrespondenceService.CorrespondenceBinder) service;
+            correspondenceBinder.sendData("服务绑定，Activity发送消息");
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+            Log.i(TAG, "服务解绑：" + name);
+            Toast.makeText(ActivityCorrespondenceActivity.this, "服务解绑：" + name, Toast.LENGTH_SHORT).show();
+            serviceConnection = null;
+            correspondenceBinder = null;
+        }
+    };
     private ActivityCorrespondenceService.CorrespondenceBinder correspondenceBinder;
 
     /**
      * 绑定服务通信
      */
     private void bindService() {
-        if (serviceConnection == null) {
-            serviceConnection = new ServiceConnection() {
-                @Override
-                public void onServiceConnected(ComponentName name, IBinder service) {
-                    correspondenceBinder = (ActivityCorrespondenceService.CorrespondenceBinder) service;
-                    correspondenceBinder.sendData("服务绑定，Activity发送消息");
-                }
-
-                @Override
-                public void onServiceDisconnected(ComponentName name) {
-                    Toast.makeText(ActivityCorrespondenceActivity.this, "服务解绑：" + name, Toast.LENGTH_SHORT).show();
-                    serviceConnection = null;
-                    correspondenceBinder = null;
-                }
-            };
-            bindService(new Intent(this, ActivityCorrespondenceService.class), serviceConnection, BIND_AUTO_CREATE);
-        }
+        bindService(new Intent(this, ActivityCorrespondenceService.class), serviceConnection, BIND_AUTO_CREATE);
     }
 
     @Override
@@ -64,12 +64,9 @@ public class ActivityCorrespondenceActivity extends BaseActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        unbindService();
-    }
-
-    private void unbindService() {
         if (serviceConnection != null) {
             unbindService(serviceConnection);
         }
     }
+
 }
