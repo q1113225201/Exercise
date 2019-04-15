@@ -3,6 +3,8 @@ package com.sjl.exercise.basic;
 import android.os.Bundle;
 
 import com.sjl.exercise.base.BaseMainActivity;
+import com.sjl.exercise.basic.custom.CustomWidgetActivity;
+import com.sjl.exercise.basic.widget.WidgetMainActivity;
 import com.sjl.exercise.bean.CatalogueBean;
 import com.sjl.exercise.module.ModuleMainActivity;
 
