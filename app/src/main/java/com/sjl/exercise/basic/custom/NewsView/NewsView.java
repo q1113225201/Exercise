@@ -44,15 +44,11 @@ public class NewsView extends NestedScrollView {
                     int scrollY = getScrollY();
                     if (scrollY >= maxHeight) {
                         scrollTo(0, 0);
+                        smoothScrollBy(0, itemHeight);
                     } else {
                         smoothScrollBy(0, itemHeight);
                     }
-                    postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            sendEmptyMessage(SCROLL);
-                        }
-                    }, interval);
+                    postDelayed(() -> sendEmptyMessage(SCROLL), interval);
                     break;
             }
         }
@@ -71,40 +67,45 @@ public class NewsView extends NestedScrollView {
 
     }
 
-    public void setData(List<String> list) {
-        post(new Runnable() {
-            @Override
-            public void run() {
-                maxHeight = getMeasuredHeight();
-                itemHeight = maxHeight / pageSize;
-                if(list.size()>=pageSize){
-                    list.addAll(list.subList(0,pageSize));
-                }
-                for (String item : list) {
-                    View view = View.inflate(getContext(), R.layout.item_news, null);
-                    ((TextView) view.findViewById(R.id.tv_content)).setText(item);
-                    mDataLayout.addView(view);
-                }
-                postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        if (handler != null) {
-                            handler.sendEmptyMessage(SCROLL);
-                        }
-                    }
-                }, interval);
+    public void setData(List<String> list, int pageSize) {
+        this.pageSize = pageSize;
+        if (list.size() == 0 || pageSize == 0) {
+            mDataLayout.removeAllViews();
+            return;
+        }
+        if (list.size() >= pageSize) {
+            list.addAll(list.subList(0, pageSize));
+        }
+        for (String item : list) {
+            View view = View.inflate(getContext(), R.layout.item_news, null);
+            ((TextView) view.findViewById(R.id.tv_content)).setText(item);
+            mDataLayout.addView(view);
+        }
+        post(() -> {
+            itemHeight = -1;
+            for (int i = 0; i < mDataLayout.getChildCount(); i++) {
+                itemHeight = Math.max(itemHeight, mDataLayout.getChildAt(i).getMeasuredHeight());
             }
+            maxHeight = itemHeight * (mDataLayout.getChildCount() - pageSize);
+            LayoutParams layoutParams = (LayoutParams) mDataLayout.getLayoutParams();
+            layoutParams.height = itemHeight * pageSize;
+            mDataLayout.setLayoutParams(layoutParams);
         });
+        postDelayed(() -> {
+            if (handler != null) {
+                handler.sendEmptyMessage(SCROLL);
+            }
+        }, interval);
     }
-
-    private int maxHeight = -1;
-    private int itemHeight = 30;
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        setMeasuredDimension(widthMeasureSpec,itemHeight*pageSize);
+        setMeasuredDimension(getMeasuredWidth(), itemHeight * pageSize);
     }
+
+    private int maxHeight = -1;
+    private int itemHeight = 30;
 
     @Override
     protected void onDetachedFromWindow() {
