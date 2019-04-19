@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".thread.AsyncTask.AsyncTaskActivity"></activity>
+        <activity android:name=".thread.HandlerThread.HandlerThreadActivity"></activity>
+        <activity android:name=".thread.AsyncTask.AsyncTaskActivity" />
         <activity android:name=".thread.handler.HandlerActivity" />
         <activity android:name=".thread.ThreadMainActivity" />
         <activity android:name=".basic.custom.NewsView.NewsViewActivity" />
