@@ -30,6 +30,6 @@ public class NewsViewActivity extends BaseActivity {
         for (int i=0;i<5;i++){
             list.add("item"+i);
         }
-        newsView.setData(list);
+        newsView.setData(list,5);
     }
 }

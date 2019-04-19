@@ -12,6 +12,7 @@
         - [服务端](https://github.com/q1113225201/Exercise/tree/master/app/src/main/java/com/sjl/exercise/module/service/remote/RemoteService.java)
         [AIDL](https://github.com/q1113225201/Exercise/blob/master/app/src/main/aidl/com/sjl/aidl/ICustomAidlInterface.aidl)
         - [客户端](https://github.com/q1113225201/Exercise/tree/master/app/src/main/java/com/sjl/exercise/module/service/remote/RemoteServiceActivity.java)
+
 ### 控件
 - [ConstraintLayout](https://blog.csdn.net/q1113225201/article/details/88777447)
     - [相对定位](https://github.com/q1113225201/Exercise/blob/master/app/src/main/res/layout/activity_constraint_layout_location.xml)
@@ -24,6 +25,9 @@
 ## 功能
 - [图片选择](https://github.com/q1113225201/Exercise/tree/master/app/src/main/java/com/sjl/exercise/function/picture)
 
+### 线程
+- [Handler](https://github.com/q1113225201/Exercise/blob/master/app/src/main/java/com/sjl/exercise/thread/handler/HandlerActivity.java)
+- [AsyncTask](https://github.com/q1113225201/Exercise/blob/master/app/src/main/java/com/sjl/exercise/thread/AsyncTask/AsyncTaskActivity.java)
 
 
 
