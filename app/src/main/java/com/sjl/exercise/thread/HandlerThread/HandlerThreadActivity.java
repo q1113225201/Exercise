@@ -48,8 +48,11 @@ public class HandlerThreadActivity extends BaseActivity {
 
     @Override
     public void initData(Bundle bundle) {
+        //创建HandlerThread
         handlerThread = new HandlerThread("handlerThread");
+        //开启线程
         handlerThread.start();
+        //获取子线程
         childHandler = new Handler(handlerThread.getLooper()) {
             @Override
             public void handleMessage(Message msg) {
