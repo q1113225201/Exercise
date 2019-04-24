@@ -7,7 +7,7 @@ import com.sjl.exercise.bean.UserBean;
 interface ICustomAidlInterface {
     String getCurrentTime();
 
-    void insertUser(UserBean userBean);
+    void insertUser(in UserBean userBean);
 
     List<UserBean> getUsers();
 

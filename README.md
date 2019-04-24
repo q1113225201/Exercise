@@ -10,7 +10,7 @@
     - [前台服务](https://github.com/q1113225201/Exercise/tree/master/app/src/main/java/com/sjl/exercise/module/service/foreground)
     - [远程服务](https://github.com/q1113225201/Exercise/tree/master/app/src/main/java/com/sjl/exercise/module/service/remote)
         - [服务端](https://github.com/q1113225201/Exercise/tree/master/app/src/main/java/com/sjl/exercise/module/service/remote/RemoteService.java)
-        [AIDL](https://github.com/q1113225201/Exercise/blob/master/app/src/main/aidl/com/sjl/aidl/ICustomAidlInterface.aidl)
+        [AIDL](https://github.com/q1113225201/Exercise/blob/master/app/src/main/aidl/com/sjl/exercise)
         - [客户端](https://github.com/q1113225201/Exercise/tree/master/app/src/main/java/com/sjl/exercise/module/service/remote/RemoteServiceActivity.java)
 
 ### 控件

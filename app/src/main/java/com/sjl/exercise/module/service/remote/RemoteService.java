@@ -7,19 +7,37 @@ import android.os.RemoteException;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.sjl.aidl.ICustomAidlInterface;
+import com.sjl.exercise.ICustomAidlInterface;
+import com.sjl.exercise.bean.UserBean;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
-
+import java.util.List;
 
 public class RemoteService extends Service {
     private static final String TAG = "RemoteService";
+    private List<UserBean> list = new ArrayList<>();
     ICustomAidlInterface.Stub stub = new ICustomAidlInterface.Stub() {
 
         @Override
         public String getCurrentTime() throws RemoteException {
             return new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss").format(new Date());
+        }
+
+        @Override
+        public void insertUser(UserBean userBean) throws RemoteException {
+            list.add(userBean);
+        }
+
+        @Override
+        public List<UserBean> getUsers() throws RemoteException {
+            return list;
+        }
+
+        @Override
+        public void clearUser() throws RemoteException {
+            list.clear();
         }
     };
 
