@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * TextAdapter
  *
- * @author 沈建林
+ * @author 林zero
  * @date 2019/4/22
  */
 public class TextAdapter extends RecyclerView.Adapter<TextAdapter.ViewHolder> {

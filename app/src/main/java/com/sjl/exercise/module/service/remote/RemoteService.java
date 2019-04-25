@@ -48,6 +48,11 @@ public class RemoteService extends Service {
         Toast.makeText(this, "远程服务onCreate", Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     * 返回IBinder用于通信
+     * @param intent
+     * @return
+     */
     @Override
     public IBinder onBind(Intent intent) {
         Log.i(TAG, "onBind");

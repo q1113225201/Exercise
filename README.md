@@ -11,7 +11,7 @@
     - [远程服务](https://github.com/q1113225201/Exercise/tree/master/app/src/main/java/com/sjl/exercise/module/service/remote)
         - [服务端](https://github.com/q1113225201/Exercise/tree/master/app/src/main/java/com/sjl/exercise/module/service/remote/RemoteService.java)
         [AIDL](https://github.com/q1113225201/Exercise/blob/master/app/src/main/aidl/com/sjl/exercise)
-        - [客户端](https://github.com/q1113225201/Exercise/tree/master/app/src/main/java/com/sjl/exercise/module/service/remote/RemoteServiceActivity.java)
+        - [客户端](https://github.com/q1113225201/Exercise/tree/master/AIDLClient/src/main/java/com/sjl/aidlclient/MainActivity.java)
 
 ### 控件
 - [ConstraintLayout](https://blog.csdn.net/q1113225201/article/details/88777447)
