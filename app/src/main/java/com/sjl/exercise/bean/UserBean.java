@@ -10,6 +10,7 @@ import android.os.Parcelable;
  * @date 2019/4/24
  */
 public class UserBean implements Parcelable {
+    private long id;
     private String name;
     private int age;
     private String address;
@@ -21,6 +22,14 @@ public class UserBean implements Parcelable {
         this.name = name;
         this.age = age;
         this.address = address;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getName() {

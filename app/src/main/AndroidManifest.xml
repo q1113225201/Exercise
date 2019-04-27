@@ -8,6 +8,13 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
+    <permission
+        android:name="com.sjl.provider.read"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="com.sjl.provider.write"
+        android:protectionLevel="normal" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,7 +22,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".basic.widget.RecyclerView.RecyclerViewActivity"></activity>
+        <provider
+            android:name=".module.ContentProvider.UserContentProvider"
+            android:authorities="com.sjl.provider"
+            android:enabled="true"
+            android:exported="true"
+            android:readPermission="com.sjl.provider.read"
+            android:writePermission="com.sjl.provider.write"></provider>
+
+        <activity android:name=".module.ContentProvider.ContentProviderActivity" />
+        <activity android:name=".basic.widget.RecyclerView.RecyclerViewActivity" />
         <activity android:name=".thread.HandlerThread.HandlerThreadActivity" />
         <activity android:name=".thread.AsyncTask.AsyncTaskActivity" />
         <activity android:name=".thread.handler.HandlerActivity" />

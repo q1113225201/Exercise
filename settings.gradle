@@ -1,1 +1,1 @@
-include ':app', ':AIDLClient'
+include ':app', ':AIDLClient', ':ContentVisitor'
