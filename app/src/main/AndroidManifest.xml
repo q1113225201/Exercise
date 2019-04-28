@@ -22,15 +22,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <service
+            android:name=".process.messenger.MessengerService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":messenger">
+            <intent-filter>
+                <action android:name="com.sjl.messenger"/>
+            </intent-filter>
+        </service>
+
+        <activity android:name=".process.messenger.MessengerActivity" />
+        <activity android:name=".process.ProcessMainActivity" />
+
         <provider
             android:name=".module.ContentProvider.UserContentProvider"
             android:authorities="com.sjl.provider"
             android:enabled="true"
             android:exported="true"
             android:readPermission="com.sjl.provider.read"
-            android:writePermission="com.sjl.provider.write"></provider>
+            android:writePermission="com.sjl.provider.write" />
 
-        <activity android:name=".module.ContentProvider.ContentProviderActivity" />
         <activity android:name=".basic.widget.RecyclerView.RecyclerViewActivity" />
         <activity android:name=".thread.HandlerThread.HandlerThreadActivity" />
         <activity android:name=".thread.AsyncTask.AsyncTaskActivity" />
@@ -49,7 +61,7 @@
             android:name=".module.service.remote.RemoteService"
             android:enabled="true"
             android:exported="true"
-            android:process=":remote">
+            android:process=":aidl">
             <intent-filter>
                 <action android:name="com.sjl.aidl.remote" />
             </intent-filter>

@@ -6,13 +6,15 @@
     - [横竖屏](https://github.com/q1113225201/Exercise/tree/master/app/src/main/java/com/sjl/exercise/module/activity/screen)
 - Broadcast
     - [有序广播](https://github.com/q1113225201/Exercise/blob/master/app/src/main/java/com/sjl/exercise/module/broadcast/send/BroadcastSendOrderActivity.java)
-- Service
+- Service ([Service启动、远程服务AIDL、IntentService](https://blog.csdn.net/q1113225201/article/details/89339984))
     - [前台服务](https://github.com/q1113225201/Exercise/tree/master/app/src/main/java/com/sjl/exercise/module/service/foreground)
     - [远程服务](https://github.com/q1113225201/Exercise/tree/master/app/src/main/java/com/sjl/exercise/module/service/remote)
         - [服务端](https://github.com/q1113225201/Exercise/tree/master/app/src/main/java/com/sjl/exercise/module/service/remote/RemoteService.java)
         [AIDL](https://github.com/q1113225201/Exercise/blob/master/app/src/main/aidl/com/sjl/exercise)
         - [客户端](https://github.com/q1113225201/Exercise/tree/master/AIDLClient/src/main/java/com/sjl/aidlclient/MainActivity.java)
-
+- ContentProvider
+    - [Provider](https://github.com/q1113225201/Exercise/blob/master/app/src/main/java/com/sjl/exercise/module/ContentProvider/UserContentProvider.java)
+    - [ContentVisitor](https://github.com/q1113225201/Exercise/blob/master/ContentVisitor/src/main/java/com/sjl/contentvisitor/MainActivity.java)
 ### 控件
 - [ConstraintLayout](https://blog.csdn.net/q1113225201/article/details/88777447)
     - [相对定位](https://github.com/q1113225201/Exercise/blob/master/app/src/main/res/layout/activity_constraint_layout_location.xml)
@@ -31,7 +33,7 @@
 - [Handler](https://github.com/q1113225201/Exercise/blob/master/app/src/main/java/com/sjl/exercise/thread/handler/HandlerActivity.java)
     - [Handler机制、源码分析、内存泄漏](https://blog.csdn.net/q1113225201/article/details/89460947)
 - [HandlerThread](https://github.com/q1113225201/Exercise/blob/master/app/src/main/java/com/sjl/exercise/thread/HandlerThread/HandlerThreadActivity.java)
-- [ThreadLocal]()
+- [ThreadLocal](https://blog.csdn.net/q1113225201/article/details/89500978)
 - [AsyncTask](https://github.com/q1113225201/Exercise/blob/master/app/src/main/java/com/sjl/exercise/thread/AsyncTask/AsyncTaskActivity.java)
 
 
