@@ -28,7 +28,7 @@ public class AsyncTaskActivity extends BaseActivity {
 
         findViewById(R.id.btn_start).setOnClickListener(v -> {
             //手动调用且必须在UI线程调用，同一AsyncTask对象只能执行一次
-            myAsyncTask.execute();
+            myAsyncTask.execute("传入参数123");
         });
         findViewById(R.id.btn_cancel).setOnClickListener(v -> myAsyncTask.cancel(true));
     }
@@ -71,7 +71,7 @@ public class AsyncTaskActivity extends BaseActivity {
          */
         @Override
         protected String doInBackground(String... strings) {
-            Log.i(TAG, "doInBackground");
+            Log.i(TAG, "doInBackground:" + strings[0]);
             try {
                 int count = 0;
                 while (count < 100) {
@@ -92,7 +92,7 @@ public class AsyncTaskActivity extends BaseActivity {
          */
         @Override
         protected void onProgressUpdate(Integer... values) {
-            Log.i(TAG, "onProgressUpdate");
+            Log.i(TAG, "onProgressUpdate:"+ values[0]);
             super.onProgressUpdate(values);
             if (weakReference.get() != null) {
                 weakReference.get().tvResult.setText("当前进度：" + values[0]);
