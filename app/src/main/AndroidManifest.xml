@@ -22,13 +22,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".basic.view.BasicViewActivity"></activity>
+
         <service
             android:name=".process.messenger.MessengerService"
             android:enabled="true"
             android:exported="true"
             android:process=":messenger">
             <intent-filter>
-                <action android:name="com.sjl.messenger"/>
+                <action android:name="com.sjl.messenger" />
             </intent-filter>
         </service>
 
