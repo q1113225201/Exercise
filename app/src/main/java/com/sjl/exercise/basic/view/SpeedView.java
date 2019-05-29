@@ -39,7 +39,6 @@ public class SpeedView extends View {
         paint = new Paint();
         paint.setTextSize(32f);
         paint.setColor(Color.WHITE);
-        setBackgroundColor(Color.BLACK);
     }
 
     private VelocityTracker velocityTracker;
