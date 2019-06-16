@@ -22,7 +22,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".basic.view.BasicViewActivity"></activity>
+        <receiver android:name=".basic.remote.MyAppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="action_click" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/my_app_widget_info" />
+        </receiver>
+
+        <activity android:name=".basic.remote.AppWidgetProviderActivity" />
+        <activity android:name=".basic.view.BasicViewActivity" />
 
         <service
             android:name=".process.messenger.MessengerService"
