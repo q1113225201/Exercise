@@ -1,4 +1,4 @@
-package com.sjl.exercise.basic.view;
+package com.sjl.exercise.basic.view.scroll;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
@@ -101,4 +101,5 @@ public class GestureView extends View {
     public boolean onTouchEvent(MotionEvent event) {
         return gestureDetector.onTouchEvent(event);
     }
+
 }

@@ -1,4 +1,4 @@
-package com.sjl.exercise.basic.view;
+package com.sjl.exercise.basic.view.scroll;
 
 import android.content.Context;
 import android.graphics.Canvas;

@@ -11,7 +11,7 @@
         android:text="VelocityTracker"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.sjl.exercise.basic.view.SpeedView
+    <com.sjl.exercise.basic.view.scroll.SpeedView
         android:id="@+id/speed_view"
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -25,7 +25,7 @@
         android:text="GestureDetector"
         app:layout_constraintTop_toBottomOf="@+id/speed_view" />
 
-    <com.sjl.exercise.basic.view.GestureView
+    <com.sjl.exercise.basic.view.scroll.GestureView
         android:id="@+id/gesture_view"
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -38,7 +38,7 @@
         android:text="Scroller"
         app:layout_constraintTop_toBottomOf="@+id/gesture_view" />
 
-    <com.sjl.exercise.basic.view.ScrollerView
+    <com.sjl.exercise.basic.view.scroll.ScrollerView
         android:id="@+id/scroller_view"
         android:layout_width="match_parent"
         android:layout_height="200dp"

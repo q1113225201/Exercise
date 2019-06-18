@@ -1,15 +1,15 @@
-package com.sjl.exercise.basic.view;
+package com.sjl.exercise.basic.view.scroll;
 
 import android.os.Bundle;
 
 import com.sjl.exercise.R;
 import com.sjl.exercise.base.BaseActivity;
 
-public class BasicViewActivity extends BaseActivity {
+public class BasicViewScrollActivity extends BaseActivity {
 
     @Override
     public int getContentLayout() {
-        return R.layout.activity_basic_view;
+        return R.layout.activity_basic_view_scroll;
     }
 
     @Override
