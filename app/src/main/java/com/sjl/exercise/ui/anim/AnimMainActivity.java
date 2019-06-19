@@ -10,5 +10,6 @@ public class AnimMainActivity extends BaseMainActivity {
     @Override
     public void initData(Bundle bundle) {
         list.add(new CatalogueBean("3D旋转", Rotate3dActivity.class));
+        list.add(new CatalogueBean("LayoutAnimation", LayoutAnimationActivity.class));
     }
 }

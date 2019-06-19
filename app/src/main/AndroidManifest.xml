@@ -22,7 +22,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.anim.Rotate3dActivity"></activity>
+        <activity android:name=".ui.anim.LayoutAnimationActivity"></activity>
+        <activity android:name=".ui.anim.Rotate3dActivity" />
         <activity android:name=".ui.anim.AnimMainActivity" />
         <activity android:name=".module.other.OtherMainActivity" />
         <activity android:name=".ui.view.conflict.BasicViewConflict3Activity" />
