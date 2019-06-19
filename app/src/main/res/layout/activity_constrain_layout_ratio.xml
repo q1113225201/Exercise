@@ -5,7 +5,7 @@
     android:id="@+id/root_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".basic.widget.ConstrainLayout.ConstrainLayoutRatioActivity">
+    tools:context=".ui.widget.ConstrainLayout.ConstrainLayoutRatioActivity">
 
     <Button
         android:layout_width="50dp"

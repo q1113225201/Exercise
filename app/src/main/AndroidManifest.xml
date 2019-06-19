@@ -22,13 +22,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".basic.view.conflict.BasicViewConflict3Activity"></activity>
-        <activity android:name=".basic.view.conflict.BasicViewConflict2Activity" />
-        <activity android:name=".basic.view.conflict.BasicViewConflict1Activity" />
-        <activity android:name=".basic.view.conflict.BasicViewConflictMainActivity" />
-        <activity android:name=".basic.view.BasicViewMainActivity" />
-        <activity android:name=".basic.view.scroll.BasicViewScrollActivity" />
-        <receiver android:name=".basic.remote.MyAppWidget">
+        <activity android:name=".ui.anim.Rotate3dActivity"></activity>
+        <activity android:name=".ui.anim.AnimMainActivity" />
+        <activity android:name=".module.other.OtherMainActivity" />
+        <activity android:name=".ui.view.conflict.BasicViewConflict3Activity" />
+        <activity android:name=".ui.view.conflict.BasicViewConflict2Activity" />
+        <activity android:name=".ui.view.conflict.BasicViewConflict1Activity" />
+        <activity android:name=".ui.view.conflict.BasicViewConflictMainActivity" />
+        <activity android:name=".ui.view.BasicViewMainActivity" />
+        <activity android:name=".ui.view.scroll.BasicViewScrollActivity" />
+
+        <receiver android:name=".ui.remote.MyAppWidget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
                 <action android:name="action_click" />
@@ -39,11 +43,11 @@
                 android:resource="@xml/my_app_widget_info" />
         </receiver>
 
-        <activity android:name=".basic.remote.AppWidgetProviderActivity" />
-        <activity android:name=".basic.view.BasicViewActivity" />
+        <activity android:name=".ui.remote.AppWidgetProviderActivity" />
+        <activity android:name=".ui.view.BasicViewActivity" />
 
         <service
-            android:name=".process.messenger.MessengerService"
+            android:name=".module.other.process.messenger.MessengerService"
             android:enabled="true"
             android:exported="true"
             android:process=":messenger">
@@ -52,8 +56,8 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".process.messenger.MessengerActivity" />
-        <activity android:name=".process.ProcessMainActivity" />
+        <activity android:name=".module.other.process.messenger.MessengerActivity" />
+        <activity android:name=".module.other.process.ProcessMainActivity" />
 
         <provider
             android:name=".module.ContentProvider.UserContentProvider"
@@ -63,13 +67,13 @@
             android:readPermission="com.sjl.provider.read"
             android:writePermission="com.sjl.provider.write" />
 
-        <activity android:name=".basic.widget.RecyclerView.RecyclerViewActivity" />
-        <activity android:name=".thread.HandlerThread.HandlerThreadActivity" />
-        <activity android:name=".thread.AsyncTask.AsyncTaskActivity" />
-        <activity android:name=".thread.handler.HandlerActivity" />
-        <activity android:name=".thread.ThreadMainActivity" />
-        <activity android:name=".basic.custom.NewsView.NewsViewActivity" />
-        <activity android:name=".basic.widget.ViewFlipper.ViewFlipperActivity" />
+        <activity android:name=".ui.widget.RecyclerView.RecyclerViewActivity" />
+        <activity android:name=".module.other.thread.HandlerThread.HandlerThreadActivity" />
+        <activity android:name=".module.other.thread.AsyncTask.AsyncTaskActivity" />
+        <activity android:name=".module.other.thread.handler.HandlerActivity" />
+        <activity android:name=".module.other.thread.ThreadMainActivity" />
+        <activity android:name=".ui.custom.NewsView.NewsViewActivity" />
+        <activity android:name=".ui.widget.ViewFlipper.ViewFlipperActivity" />
 
         <service
             android:name=".module.service.IntentService.CustomIntentService"
@@ -124,14 +128,14 @@
         <activity android:name=".module.ModuleMainActivity" />
         <activity android:name=".function.picture.FunctionPictureActivity" />
         <activity android:name=".function.FunctionMainActivity" />
-        <activity android:name=".basic.custom.CustomWidgetActivity" />
-        <activity android:name=".basic.widget.ConstrainLayout.ConstraintLayoutCircleActivity" />
-        <activity android:name=".basic.widget.ConstrainLayout.ConstrainLayoutChainActivity" />
-        <activity android:name=".basic.widget.ConstrainLayout.ConstrainLayoutBiasActivity" />
-        <activity android:name=".basic.widget.ConstrainLayout.ConstrainLayoutFillActivity" />
-        <activity android:name=".basic.widget.ConstrainLayout.ConstrainLayoutGuideLineActivity" />
-        <activity android:name=".basic.widget.ConstrainLayout.ConstrainLayoutRatioActivity" />
-        <activity android:name=".basic.widget.ConstrainLayout.ConstraintLayoutLocationActivity" />
+        <activity android:name=".ui.custom.CustomWidgetActivity" />
+        <activity android:name=".ui.widget.ConstrainLayout.ConstraintLayoutCircleActivity" />
+        <activity android:name=".ui.widget.ConstrainLayout.ConstrainLayoutChainActivity" />
+        <activity android:name=".ui.widget.ConstrainLayout.ConstrainLayoutBiasActivity" />
+        <activity android:name=".ui.widget.ConstrainLayout.ConstrainLayoutFillActivity" />
+        <activity android:name=".ui.widget.ConstrainLayout.ConstrainLayoutGuideLineActivity" />
+        <activity android:name=".ui.widget.ConstrainLayout.ConstrainLayoutRatioActivity" />
+        <activity android:name=".ui.widget.ConstrainLayout.ConstraintLayoutLocationActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -139,9 +143,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".basic.BasicMainActivity" />
-        <activity android:name=".basic.widget.WidgetMainActivity" />
-        <activity android:name=".basic.widget.ConstrainLayout.ConstraintLayoutMainActivity" /> <!-- 7.0文件 -->
+        <activity android:name=".ui.UIMainActivity" />
+        <activity android:name=".ui.widget.WidgetMainActivity" />
+        <activity android:name=".ui.widget.ConstrainLayout.ConstraintLayoutMainActivity" /> <!-- 7.0文件 -->
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"

@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.sjl.exercise.basic.view.conflict.ConflictHViewGroup xmlns:android="http://schemas.android.com/apk/res/android"
+<com.sjl.exercise.ui.view.conflict.ConflictHViewGroup xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EEE">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"
-        android:layout_width="300dp"
-        android:background="#F00"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
 
     <TextView
@@ -17,7 +16,7 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view2"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
 
-</com.sjl.exercise.basic.view.conflict.ConflictHViewGroup>
+</com.sjl.exercise.ui.view.conflict.ConflictHViewGroup>
