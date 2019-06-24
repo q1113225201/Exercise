@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <permission
         android:name="com.sjl.provider.read"
@@ -22,7 +23,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.anim.LayoutAnimationActivity"></activity>
+        <activity android:name=".ui.window.WindowActivity"></activity>
+        <activity android:name=".ui.anim.LayoutAnimationActivity" />
         <activity android:name=".ui.anim.Rotate3dActivity" />
         <activity android:name=".ui.anim.AnimMainActivity" />
         <activity android:name=".module.other.OtherMainActivity" />

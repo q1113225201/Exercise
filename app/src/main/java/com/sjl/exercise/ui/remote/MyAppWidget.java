@@ -53,7 +53,9 @@ public class MyAppWidget extends AppWidgetProvider {
         RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.my_app_widget);
         remoteViews.setTextViewText(R.id.tv_app_widget, "点击" + cnt);
 
-        PendingIntent clickIntent = PendingIntent.getBroadcast(context, 0, new Intent(ACTION_CLICK), 0);
+        Intent intent = new Intent(ACTION_CLICK);
+        intent.setPackage(context.getPackageName());
+        PendingIntent clickIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
         remoteViews.setOnClickPendingIntent(R.id.btn_click, clickIntent);
 
         PendingIntent inIntent = PendingIntent.getActivity(context, 0, new Intent(context, AppWidgetProviderActivity.class), 0);
