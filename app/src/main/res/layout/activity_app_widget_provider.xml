@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".basic.remote.AppWidgetProviderActivity">
+    tools:context=".ui.remote.AppWidgetProviderActivity">
     <Button
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
