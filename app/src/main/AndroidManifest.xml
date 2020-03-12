@@ -2,21 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sjl.exercise">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-
-    <permission
-        android:name="com.sjl.provider.read"
-        android:protectionLevel="normal" />
-    <permission
-        android:name="com.sjl.provider.write"
-        android:protectionLevel="normal" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -24,98 +9,48 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <service
-            android:name=".function.record.RecordService"
-            android:enabled="true"
-            android:exported="true"></service>
+        <activity android:name=".ui.custom.ShadowLayout.ShadowLayoutActivity"></activity>
 
         <activity android:name=".function.record.RecordActivity" />
 
-        <receiver android:name=".ui.remote.MyAppWidget">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="action_click" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/my_app_widget_info" />
-        </receiver>
-
         <activity android:name=".ui.remote.AppWidgetProviderActivity" />
-        <activity android:name=".ui.view.BasicViewMainActivity" />
 
-        <service
-            android:name=".module.other.process.messenger.MessengerService"
-            android:enabled="true"
-            android:exported="true"
-            android:process=":messenger">
-            <intent-filter>
-                <action android:name="com.sjl.messenger" />
-            </intent-filter>
-        </service>
+        <activity android:name=".ui.view.BasicViewMainActivity" />
 
         <activity android:name=".module.other.process.messenger.MessengerActivity" />
         <activity android:name=".module.other.process.ProcessMainActivity" />
 
-        <provider
-            android:name=".module.ContentProvider.UserContentProvider"
-            android:authorities="com.sjl.provider"
-            android:enabled="true"
-            android:exported="true"
-            android:readPermission="com.sjl.provider.read"
-            android:writePermission="com.sjl.provider.write" />
-
         <activity android:name=".ui.widget.RecyclerView.RecyclerViewActivity" />
+
         <activity android:name=".module.other.thread.HandlerThread.HandlerThreadActivity" />
         <activity android:name=".module.other.thread.AsyncTask.AsyncTaskActivity" />
+
         <activity android:name=".module.other.thread.handler.HandlerActivity" />
+
         <activity android:name=".module.other.thread.ThreadMainActivity" />
         <activity android:name=".ui.custom.NewsView.NewsViewActivity" />
         <activity android:name=".ui.widget.ViewFlipper.ViewFlipperActivity" />
-
-        <service
-            android:name=".module.service.IntentService.CustomIntentService"
-            android:exported="false" />
-
         <activity android:name=".module.service.IntentService.IntentServiceActivity" />
-
-        <service
-            android:name=".module.service.remote.RemoteService"
-            android:enabled="true"
-            android:exported="true"
-            android:process=":aidl">
-            <intent-filter>
-                <action android:name="com.sjl.aidl.remote" />
-            </intent-filter>
-        </service>
-
         <activity android:name=".module.service.remote.RemoteServiceActivity" />
-
-        <service
-            android:name=".module.service.foreground.ForegroundService"
-            android:enabled="true"
-            android:exported="true" />
-
         <activity
             android:name=".module.service.foreground.ForegroundServiceActivity"
             android:launchMode="singleTop" />
         <activity android:name=".module.service.ServiceMainActivity" />
+
         <activity android:name=".module.broadcast.send.BroadcastSendOrderActivity" />
+
         <activity
             android:name=".module.activity.screen.ScreenSizeActivity"
             android:configChanges="orientation|screenSize" />
+
         <activity android:name=".module.activity.screen.ScreenConfigActivity" />
+
         <activity
             android:name=".module.activity.screen.ScreenOrientationActivity"
             android:configChanges="orientation" />
 
-        <service
-            android:name=".module.activity.correspondence.ActivityCorrespondenceService"
-            android:enabled="true"
-            android:exported="true" />
-
         <activity android:name=".module.activity.correspondence.ActivityCorrespondenceActivity" />
+
         <activity android:name=".module.activity.launchmode.SingleInstance4Activity" />
         <activity
             android:name=".module.activity.launchmode.SingleInstance3Activity"
@@ -124,7 +59,9 @@
         <activity android:name=".module.activity.launchmode.SingleInstanceActivity" />
         <activity android:name=".module.activity.launchmode.LaunchModeMainActivity" />
         <activity android:name=".module.activity.ActivityMainActivity" />
+
         <activity android:name=".module.ModuleMainActivity" />
+
         <activity android:name=".function.picture.FunctionPictureActivity" />
         <activity android:name=".function.FunctionMainActivity" />
         <activity android:name=".ui.custom.CustomWidgetActivity" />
@@ -142,10 +79,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.window.WindowActivity"></activity>
+        <activity android:name=".ui.window.WindowActivity" />
         <activity android:name=".ui.UIMainActivity" />
         <activity android:name=".ui.widget.WidgetMainActivity" />
-        <activity android:name=".ui.widget.ConstrainLayout.ConstraintLayoutMainActivity" /> <!-- 7.0文件 -->
+        <activity android:name=".ui.widget.ConstrainLayout.ConstraintLayoutMainActivity" />
+        <activity android:name=".module.broadcast.BroadcastMainActivity" />
+        <activity android:name=".module.broadcast.send.BroadcastSendMainActivity" />
+        <provider
+            android:name=".module.ContentProvider.UserContentProvider"
+            android:authorities="com.sjl.provider"
+            android:enabled="true"
+            android:exported="true"
+            android:readPermission="com.sjl.provider.read"
+            android:writePermission="com.sjl.provider.write" />
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
@@ -157,9 +103,65 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_provider_paths" />
         </provider>
+        <receiver android:name=".ui.remote.MyAppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="action_click" />
+            </intent-filter>
 
-        <activity android:name=".module.broadcast.BroadcastMainActivity" />
-        <activity android:name=".module.broadcast.send.BroadcastSendMainActivity" />
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/my_app_widget_info" />
+        </receiver>
+        <service
+            android:name=".function.record.RecordService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".module.other.process.messenger.MessengerService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":messenger">
+            <intent-filter>
+                <action android:name="com.sjl.messenger" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".module.service.IntentService.CustomIntentService"
+            android:exported="false" /> <!-- 7.0文件 -->
+        <service
+            android:name=".module.service.remote.RemoteService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":aidl">
+            <intent-filter>
+                <action android:name="com.sjl.aidl.remote" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".module.service.foreground.ForegroundService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".module.activity.correspondence.ActivityCorrespondenceService"
+            android:enabled="true"
+            android:exported="true" />
     </application>
+    <permission
+        android:name="com.sjl.provider.read"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="com.sjl.provider.write"
+        android:protectionLevel="normal" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
 </manifest>
