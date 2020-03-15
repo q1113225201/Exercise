@@ -4,84 +4,138 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="32dp"
+    android:background="#FFF"
     tools:context=".ui.custom.ShadowLayout.ShadowLayoutActivity">
 
     <View
         android:id="@+id/view"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:background="#00FF00"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="12dp"
+        android:layout_margin="3dp"
+        android:background="@drawable/bg_progress"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
     <com.sjl.exercise.ui.custom.ShadowLayout.ShadowLayout
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/view"
+        android:id="@+id/sl1"
+        android:layout_width="0dp"
+        android:layout_height="12dp"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/gl_1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:leftRadius="6dp"
+        app:shadowColor="#CC68EF19"
+        app:shadowLimit="3dp">
+    </com.sjl.exercise.ui.custom.ShadowLayout.ShadowLayout>
+    <android.support.constraint.Guideline
+        android:id="@+id/gl_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.17" />
+    <View
+        android:layout_width="6dp"
+        android:layout_height="0dp"
+        android:background="#FFF"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        app:layout_constraintLeft_toLeftOf="@id/gl_1"
+        app:layout_constraintRight_toRightOf="@id/gl_1"
+        app:layout_constraintTop_toTopOf="@id/view" />
+    <com.sjl.exercise.ui.custom.ShadowLayout.ShadowLayout
+        android:id="@+id/sl2"
+        android:layout_width="0dp"
+        android:layout_height="12dp"
+        app:layout_constraintLeft_toLeftOf="@id/gl_1"
+        app:layout_constraintRight_toRightOf="@id/gl_2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shadowColor="#68EF19"
+        app:shadowLimit="3dp">
+    </com.sjl.exercise.ui.custom.ShadowLayout.ShadowLayout>
+    <android.support.constraint.Guideline
+        android:id="@+id/gl_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.34" />
+    <View
+        android:layout_width="6dp"
+        android:layout_height="0dp"
+        android:background="#FFF"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        app:layout_constraintLeft_toLeftOf="@id/gl_2"
+        app:layout_constraintRight_toRightOf="@id/gl_2"
+        app:layout_constraintTop_toTopOf="@id/view" />
+    <com.sjl.exercise.ui.custom.ShadowLayout.ShadowLayout
+        android:id="@+id/sl3"
+        android:layout_width="0dp"
+        android:layout_height="12dp"
+        app:layout_constraintLeft_toLeftOf="@id/gl_2"
+        app:layout_constraintRight_toRightOf="@id/gl_3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shadowColor="#68EF19"
+        app:shadowLimit="3dp">
+    </com.sjl.exercise.ui.custom.ShadowLayout.ShadowLayout>
+    <android.support.constraint.Guideline
+        android:id="@+id/gl_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.51" />
+    <View
+        android:layout_width="6dp"
+        android:layout_height="0dp"
+        android:background="#FFF"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        app:layout_constraintLeft_toLeftOf="@id/gl_3"
+        app:layout_constraintRight_toRightOf="@id/gl_3"
+        app:layout_constraintTop_toTopOf="@id/view" />
+    <com.sjl.exercise.ui.custom.ShadowLayout.ShadowLayout
+        android:id="@+id/sl4"
+        android:layout_width="0dp"
+        android:layout_height="12dp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="@id/gl_3"
+        app:layout_constraintRight_toRightOf="@id/gl_4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shadowColor="#68EF19"
+        app:shadowLimit="3dp">
+    </com.sjl.exercise.ui.custom.ShadowLayout.ShadowLayout>
+    <android.support.constraint.Guideline
+        android:id="@+id/gl_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.68" />
+    <View
+        android:layout_width="6dp"
+        android:layout_height="0dp"
+        android:background="#FFF"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        app:layout_constraintLeft_toLeftOf="@id/gl_4"
+        app:layout_constraintRight_toRightOf="@id/gl_4"
+        app:layout_constraintTop_toTopOf="@id/view" />
+    <com.sjl.exercise.ui.custom.ShadowLayout.ShadowLayout
+        android:id="@+id/sl5"
+        android:layout_width="0dp"
+        android:layout_height="12dp"
+        app:layout_constraintLeft_toLeftOf="@id/gl_4"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:leftRadius="25dp"
-        app:shadowColor="#FF0000"
-        app:shadowLimit="10dp">
-
-        <View
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:background="@drawable/left_radius" />
+        app:rightRadius="6dp"
+        app:shadowColor="#68EF19"
+        app:shadowLimit="3dp">
     </com.sjl.exercise.ui.custom.ShadowLayout.ShadowLayout>
-
     <com.sjl.exercise.ui.custom.ShadowLayout.ShadowLayout
         android:layout_width="100dp"
-        android:layout_height="50dp"
+        android:layout_height="100dp"
+        app:cornerRadius="50dp"
+        app:dy="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"
-        app:rightRadius="25dp"
-        app:shadowColor="#FF0000"
-        app:shadowLimit="10dp">
-
-        <View
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:background="@drawable/right_radius" />
-    </com.sjl.exercise.ui.custom.ShadowLayout.ShadowLayout>
-
-    <com.sjl.exercise.ui.custom.ShadowLayout.ShadowLayout
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        app:cornerRadius="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/view"
         app:layout_constraintTop_toTopOf="parent"
-        app:shadowColor="#FF0000"
-        app:shadowLimit="10dp">
-
-        <View
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:background="@drawable/radius" />
-    </com.sjl.exercise.ui.custom.ShadowLayout.ShadowLayout>
-
-    <com.sjl.exercise.ui.custom.ShadowLayout.ShadowLayout
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:cornerRadius="25dp"
-        app:dy="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/view"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:shadowColor="#FF0000"
-        app:shadowLimit="10dp">
-
-        <View
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/radius" />
+        app:shadowColor="#68EF19"
+        app:shadowLimit="12dp">
     </com.sjl.exercise.ui.custom.ShadowLayout.ShadowLayout>
 </android.support.constraint.ConstraintLayout>

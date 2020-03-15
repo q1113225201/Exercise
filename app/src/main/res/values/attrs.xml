@@ -9,21 +9,11 @@
         <attr name="dx" format="dimension" />
         <!--y轴的偏移量-->
         <attr name="dy" format="dimension" />
-        <!--左边是否显示阴影-->
-        <attr name="leftShow" format="boolean" />
-        <!--右边是否显示阴影-->
-        <attr name="rightShow" format="boolean" />
-        <!--上边是否显示阴影-->
-        <attr name="topShow" format="boolean" />
-        <!--下面是否显示阴影-->
-        <attr name="bottomShow" format="boolean" />
         <!--左方圆角-->
         <attr name="leftRadius" format="dimension" />
         <!--右方圆角-->
         <attr name="rightRadius" format="dimension" />
         <!--        是否要显示应用，可能有只想用shape这块，不想要阴影-->
         <attr name="isShowShadow" format="boolean" />
-        <!--控件区域是否对称，默认是对称。不对称的话，那么控件区域随着阴影区域走-->
-        <attr name="isSym" format="boolean" />
     </declare-styleable>
 </resources>
